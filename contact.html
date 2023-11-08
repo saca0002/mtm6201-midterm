@@ -15,7 +15,7 @@
 
 </head>
 <body>
-    <header id="top">
+    <header id="top" role="banner">
         <ul class="skip-links">
             <li class="skip-link-item">
               <a href="#main" aria-label="Skip to Main Section">Skip to Main Content</a>
@@ -25,15 +25,23 @@
             </li>
         </ul>
 
-        <div class="logo"><img src="images/logo/tc-logo-black.png" alt="The Cakesmith logo"></div>
-
-        <nav>
-            <ul>
-                <li><a href="index.html" aria-label="Go to Home Page">Home</a></li>
-                <li><a href="shop.html" aria-label="Go to Products Page">Shop</a></li>
-                <li><a href="contact.html" aria-label="Go to Contact Page">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="wrapper">
+            <div class="logo">
+              <picture>
+                <source srcset="images/logo/tc-logo-black-140_x_85.png" media="(max-width: 200px)">
+                <source srcset="images/logo/tc-logo-black-280_x_170.png" media="(max-width: 400px)">
+                <img src="images/logo/tc-logo-black-280_x_170.png" alt="The Cakesmith logo">
+              </picture>
+            </div>
+  
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html" aria-label="Go to Home Page" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" aria-label="Go to Products Page" class="nav-link">Shop</a></li>
+                    <li><a href="contact.html" aria-label="Go to Contact Page" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section id="main">
@@ -73,8 +81,7 @@
     </div>
     
     <footer>
-        <div id="footer" class="footer-col"><p>Copyright © 2023 The Cakesmith</p></div>
-        
+               
         <div itemscope itemtype="https://schema.org/Bakery" class="footer-col">
             <h4>Contact Information</h4>
             <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
@@ -103,6 +110,8 @@
                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
+
+        <div id="footer" class="footer-col"><p>Copyright © 2023 The Cakesmith</p></div>
     </footer> 
 
 </body>
